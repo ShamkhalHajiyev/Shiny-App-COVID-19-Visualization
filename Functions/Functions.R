@@ -22,3 +22,5 @@ loadD = function(fileName, columnName) {
   }
   return(data)
 }
+
+

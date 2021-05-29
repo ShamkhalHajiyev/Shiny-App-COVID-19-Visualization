@@ -8,7 +8,8 @@ requiredPackages = c(
   'shinydashboard',
   'leaflet',
   'DT',
-  'RColorBrewer'
+  'RColorBrewer',
+  'readr'
 )
 
 

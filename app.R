@@ -10,43 +10,13 @@ source("Functions/Functions.R")
 source("Global/Global.R")
 
 
+# 4. Ui
 
-# Define UI for application that draws a histogram
-ui <- fluidPage(
+source("ui/ui.R")
 
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
+# 4. Server
 
-    # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of BINS:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("disttPlot")
-           
-        )
-    )
-)
-
-# Define server logic required to draw a histogram
-server <- function(input, output) {
-
-    output$disttPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    })
-}
-
+source("server/server.R")
+    
 # Run the application 
 shinyApp(ui = ui, server = server)
