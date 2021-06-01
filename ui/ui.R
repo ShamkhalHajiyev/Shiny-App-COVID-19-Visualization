@@ -1,7 +1,7 @@
 ui <- fluidPage(
   navbarPage(
     "COVID-19 Visualization Application",
-    tabPanel("Graphs",
+    tabPanel("Main Graph",
     sidebarLayout(
       sidebarPanel(
         selectizeInput(
@@ -31,6 +31,6 @@ ui <- fluidPage(
                  plotlyOutput("cumulatedMetrics"))
       ))
     )),
-    tabPanel("Compare the datas of Countries")
+    tabPanel("Compare Countries")
   )
 )
