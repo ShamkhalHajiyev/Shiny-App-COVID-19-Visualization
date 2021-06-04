@@ -86,7 +86,31 @@ server <- function(input, output, session) {
                                         "New Cases per Day")
   output$cumulatedMetrics = BarPlot_MainGraph("Cum", legendPrefix = "Cumulated", yaxisTitle =
                                             "Cumulated Cases")
+  ########### DATA REVIEW ########### 
+  new_Data <- raw_data[order(raw_data$`Country/Region`),] %>%
+    group_by(`Province/State`, `Country/Region`) %>%
+    arrange(desc(raw_data$date)) %>%
+    slice(1)
+  output$Data_review <- DT::renderDataTable({
+    DT::datatable(new_Data[, drop = FALSE])
+  })
+  output$downloadDataDaily <- downloadHandler(
+    filename = function() {
+      paste("Covid-19_Daily", Sys.Date(), ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(new_Data, file)
+    }
+  )
   
+  output$downloadDataCumulated <- downloadHandler(
+    filename = function() {
+      paste("Covid-19_Cumulated", Sys.Date(), ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(new_Data, file)
+    }
+  )
   }
 
 

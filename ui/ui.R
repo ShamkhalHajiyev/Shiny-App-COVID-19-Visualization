@@ -31,6 +31,21 @@ ui <- fluidPage(
                  plotlyOutput("cumulatedMetrics"))
       ))
     )),
-    tabPanel("Compare Countries")
+    tabPanel("Compare Countries"),
+    tabPanel(
+      "Data Review",
+      DT::dataTableOutput("Data_review"),
+      downloadButton("downloadDataDaily", "Download Daily Data"),
+      tags$br(),
+      tags$br(),
+      downloadButton("downloadDataCumulated", "Download Cumulated Data"),
+      tags$br(),
+      tags$br(),
+      tags$br(),
+      tags$br(),
+      "This data is modified and taken from",
+      tags$a(href = "https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series",
+             "Johns Hopkins Center for Systems Science and Engineering.")
+    )
   )
 )
