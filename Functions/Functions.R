@@ -23,5 +23,7 @@ loadD = function(fileName, columnName) {
   return(data)
 }
 
-
+delete.na <- function(DF, n=0) {
+  DF[rowSums(is.na(DF)) <= n,]
+}
 

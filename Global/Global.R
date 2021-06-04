@@ -16,6 +16,4 @@ raw_data =
   inner_join(loadD("time_series_covid19_recovered_global.csv", "CumRecovered"))
 
 
-countries = read_csv("Data/countries_codes_and_coordinates.csv")
-
-
+raw_data <- delete.na(raw_data)
