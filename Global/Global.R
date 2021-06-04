@@ -2,6 +2,9 @@ source("Functions/Functions.R")
 
 options(scipen = 999)
 
+f1 = list(family = "Courier New, monospace",
+          size = 12,
+          color = "rgb(0,0,0)")
 
 data_url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/"
 
@@ -14,4 +17,5 @@ raw_data =
 
 
 countries = read_csv("Data/countries_codes_and_coordinates.csv")
+
 
