@@ -1,14 +1,32 @@
-# Visalization of COVID-19 in Shiny - APP
+# COVID-19 Data Visualization in Shiny - Application Overview
 
-At the latest since the COVID-19 is a pandemic, half of the world is paying attention to the case statistics.  We decided to create a shiny app which will visualize the data set in various types. 
+Since the onset of the COVID-19 pandemic, global attention has been focused on tracking case statistics. To aid in understanding and visualizing the pandemic’s progression, we’ve developed a Shiny app that provides interactive visualizations of COVID-19 data.
 
-In app, we will have 4 main tabs, Graphs, Compare the datas of Countries, Data Review, and About Project. We will give a lot of options to user to select the visaluzation type based on his requirements. 
+## Application Features
 
-The data is taken from the folder which contains daily time series summary tables, including confirmed, deaths and recovered. All data is read in from the daily case report. The time series tables are subject to be updated if inaccuracies are identified in our historical data. The daily reports will not be adjusted in these instances to maintain a record of raw data.
+The app consists of four primary tabs:
 
-Below you can find the dataset of our project:
-https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
+1. **Graphs**  
+   A range of customizable visualizations, allowing users to select the type of graph that best suits their needs.
 
+2. **Country Comparison**  
+   A feature that enables users to compare COVID-19 statistics between different countries.
 
+3. **Data Review**  
+   An overview of the raw data, giving users the opportunity to explore detailed statistics.
 
-By Shamkhal Hajiyev (425991) and Rezart Abazi (425997)
+4. **About Project**  
+   Information on the project’s background, objectives, and data sources.
+
+## Data Source
+
+The data is sourced from daily time series summaries, which include confirmed cases, deaths, and recoveries. These daily reports are drawn directly from the official dataset to ensure accuracy, although any future adjustments to historical data will not retroactively affect the original daily reports to preserve the integrity of the raw data.
+
+The dataset can be accessed [here](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series).
+
+## Developers
+
+Developed by:
+
+- **Shamkhal Hajiyev**
+- **Rezart Abazi**
